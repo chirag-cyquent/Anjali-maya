@@ -58,7 +58,7 @@ $autoload['packages'] = array();
 |
 |	$autoload['libraries'] = array('user_agent' => 'ua');
 */
-$autoload['libraries'] = array('CI_Smarty'=> "smarty");
+$autoload['libraries'] = array('CI_Smarty'=> "smarty","session");
 
 /*
 | -------------------------------------------------------------------

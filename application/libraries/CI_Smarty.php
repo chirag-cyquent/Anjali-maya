@@ -23,7 +23,9 @@ class CI_Smarty extends Smarty {
 
         log_message('debug', "Smarty Class Initialized");
     }
-
+    function setTemplate_dir($path){
+        $this->template_dir = APPPATH . $path;
+    }
     function setDebug( $debug=true )
     {
         $this->debug = $debug;

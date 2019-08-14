@@ -51,7 +51,7 @@ class Admin extends CI_Controller {
 
 		}else if($action == "edit")
 		{
-			$this->smarty->publish_to_tpl(array("page"=>$this->admin_pages->get_pege($id)));
+			$this->smarty->publish_to_tpl(array("page"=>$this->admin_pages->get_page($id)));
 		}
 		elseif($action == "delete" )
 		{
@@ -59,8 +59,35 @@ class Admin extends CI_Controller {
 			header('location: /admin/pages/');
 		}
 
-		$this->smarty->publish_to_tpl(array("allpages"=>$this->admin_pages->get_pege(false)));
+		$this->smarty->publish_to_tpl(array("allpages"=>$this->admin_pages->get_page(false)));
 		$this->smarty->view('pages.html');
+	}
+
+	public function reviews($action = null ,$id = null )
+	{
+		$this->load->model('admin_reviews');	
+		if($action == "save" )
+		{
+			$this->admin_reviews->save_entry(["author"=>$this->input->post("author"),
+			"content"=>$this->input->post("content"),
+			"date"=>$this->input->post("date"),
+			"order_no"=>$this->input->post("order_no"),
+			"hash_id"=>$this->input->post("reviewID")],
+			$this->input->post("reviewID") ?$this->input->post("reviewID"):null);
+			header('location: /admin/reviews/');
+
+		}else if($action == "edit")
+		{
+			$this->smarty->publish_to_tpl(array("review"=>$this->admin_reviews->get_review($id)));
+		}
+		elseif($action == "delete" )
+		{
+			$this->admin_reviews->delete_entry($id ? $id : false);
+			header('location: /admin/reviews/');
+		}
+
+		$this->smarty->publish_to_tpl(array("allreviews"=>$this->admin_reviews->get_review(false)));
+		$this->smarty->view('reviews.html');
 	}
 
 	private function authenticate()

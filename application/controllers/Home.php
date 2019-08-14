@@ -21,8 +21,10 @@ class Home extends CI_Controller {
 	public function index()
 	{
 		$this->load->model('admin_pages');	
-		$this->admin_pages->get_pege(false);
-		$this->smarty->publish_to_tpl(["pages"=>	$this->admin_pages->get_pege(false)]);
+		$this->load->model('admin_reviews');	
+		
+		$this->smarty->publish_to_tpl(["pages"=>	$this->admin_pages->get_page(false)]);
+		$this->smarty->publish_to_tpl(["reviews"=>	$this->admin_reviews->get_review(false)]);
 		$this->smarty->view('home.html');
 	}
 }

@@ -1,14 +1,8 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
-class Admin_pages extends CI_Model {
+class Admin_reviews extends CI_Model {
 
-        private $table =  "tbl_pages";
-
-        public function get_last_ten_entries()
-        {
-                $query = $this->db->get('entries', 10);
-                return $query->result();
-        }
+        private $table =  "tbl_reviews";
 
 
         public function save_entry($data , $id)
@@ -33,7 +27,7 @@ class Admin_pages extends CI_Model {
                 return false;
         }
 
-        public function get_page($id)
+        public function get_review($id)
         {
                 if($id)
                 {

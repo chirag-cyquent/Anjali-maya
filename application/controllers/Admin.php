@@ -26,17 +26,41 @@ class Admin extends CI_Controller {
 	*/
 	function __construct(){
 		parent::__construct();
-
-		$this->load->helper('url');
-		// Load form helper library
+		
 		$this->smarty->setTemplate_dir("views/templates/admin");
 		$this->authenticate();
-
+		$this->smarty->publish_to_tpl(array("session_id"=>$this->session->userdata('session_id'),"user"=>$this->session->userdata('user')));
 	}
 
 	public function index()
 	{
-		$this->smarty->view('index.html',array("session_id"=>$this->session->userdata('session_id'),"user"=>$this->session->userdata('user')));
+		$this->smarty->view('index.html');
+	}
+
+	public function pages($action = null ,$id = null )
+	{
+		$this->load->model('admin_pages');	
+		if($action == "save" )
+		{
+			$this->admin_pages->save_entry(["heading"=>$this->input->post("heading"),
+			"content"=>$this->input->post("content"),
+			"order_no"=>$this->input->post("order_no"),
+			"hash_id"=>$this->input->post("pageID")],
+			$this->input->post("pageID") ?$this->input->post("pageID"):null);
+			header('location: /admin/pages/');
+
+		}else if($action == "edit")
+		{
+			$this->smarty->publish_to_tpl(array("page"=>$this->admin_pages->get_pege($id)));
+		}
+		elseif($action == "delete" )
+		{
+			$this->admin_pages->delete_entry($id ? $id : false);
+			header('location: /admin/pages/');
+		}
+
+		$this->smarty->publish_to_tpl(array("allpages"=>$this->admin_pages->get_pege(false)));
+		$this->smarty->view('pages.html');
 	}
 
 	private function authenticate()

@@ -11,7 +11,7 @@ public function get_last_ten_entries()
 
 public function validate($username, $password,$hash)
 {
-        if((sha1($username.$hash) == sha1("Maya".$hash)) && (sha1($password.$hash) == sha1("BIRetail@@33".$hash)) ){
+        if((sha1($username.$hash) == sha1("admin".$hash)) && (sha1($password.$hash) == sha1("admin".$hash)) ){
               return true;  
         }
         return false;

@@ -17,15 +17,12 @@ class Home extends CI_Controller {
 	 * So any other public methods not prefixed with an underscore will
 	 * map to /index.php/welcome/<method_name>
 	 * @see https://codeigniter.com/user_guide/general/urls.html
-	 
-	public function index()
-	{
-		$this->load->view('welcome_message');
-	}
-
 	*/
 	public function index()
 	{
+		$this->load->model('admin_pages');	
+		$this->admin_pages->get_pege(false);
+		$this->smarty->publish_to_tpl(["pages"=>	$this->admin_pages->get_pege(false)]);
 		$this->smarty->view('home.html');
 	}
 }

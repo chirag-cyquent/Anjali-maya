@@ -48,9 +48,15 @@ class CI_Smarty extends Smarty {
      * @param    bool
      * @return    string
      */
+    function publish_to_tpl($arr){
+        foreach ($arr as $key => $val)
+        {
+            $this->assign($key, $val);
+        }
+    }
     function view($template, $data = array(), $return = FALSE)
     {
-        
+        $this->assign("base_url", HTTP_HOST . DIRECTORY_SEPARATOR);
         if ( ! $this->debug )
         {
             $this->error_reporting = false;

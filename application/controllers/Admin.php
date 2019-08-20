@@ -90,6 +90,43 @@ class Admin extends CI_Controller {
 		$this->smarty->view('reviews.html');
 	}
 
+	public function demo($action = null ,$id = null )
+	{
+		$this->load->model('admin_demo');	
+		if($action == "save" )
+		{
+			$this->admin_demo->save_entry(["embeded"=>$this->input->post("embededContent"),
+			"order_no"=>$this->input->post("order_no"),
+			"hash_id"=>$this->input->post("embededID")],
+			$this->input->post("embededID") ?$this->input->post("embededID"):null);
+			header('location: /admin/demo/');
+
+		}else if($action == "edit")
+		{
+			$this->smarty->publish_to_tpl(array("demo"=>$this->admin_demo->get_demo($id)));
+		}
+		elseif($action == "delete" )
+		{
+			$this->admin_demo->delete_entry($id ? $id : false);
+			header('location: /admin/demo/');
+		}
+
+		$this->smarty->publish_to_tpl(array("demos"=>$this->admin_demo->get_demo(false)));
+		$this->smarty->view('demo.html');
+	}
+
+	public function biography($action = null){
+		$this->load->model('admin_biography');	
+		if($action == "save" )
+		{
+			$this->admin_biography->save_entry(["story"=>$this->input->post("biograpyContent"),
+			"url"=>$this->input->post("urlImg")], sha1("1"."_STALT"));
+			header('location: /admin/biograpy/');
+		}
+		$this->smarty->publish_to_tpl(array("bio"=>$this->admin_biography->get_bio()));
+		$this->smarty->view('bio.html');
+	}
+
 	private function authenticate()
 	{
 		if(!$this->session->userdata('loggedIn')){

@@ -1,36 +1,73 @@
-<section id="section5" class=" contactUs contact_section parallax-lite" data-center="background-position: 50% 0px" data-top-bottom="background-position: 50% -100px;">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">Contact Me</h2>
-                    <!-- <h3 class="section-subheading text-muted contact"></h3> -->
-                </div>
+<section id="section2" class=" contactUs contact_section parallax-lite" data-center="background-position: 50% 0px" data-top-bottom="background-position: 50% -100px;">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h2 class="section-heading">Contact Me</h2>
             </div>
-            <div class="row">
-                <div class="cnt-div  wow fadeInRight" data-wow-delay="0s">
-                    <div class="wpforms-container wpforms-container-full" id="wpforms-110">
-                        <form id="" class="wpforms-validate wpforms-form" data-formid="110" method="post" enctype="multipart/form-data" action="/">
-                            <div class="wpforms-field-container">
-                                <div id="form_name-container" class="wpforms-field wpforms-field-text" data-field-id="3">
-                                    <label class="wpforms-field-label" for="form_name">Name <span class="wpforms-required-label">*</span></label>
-                                    <input type="text" id="form_name" class="wpforms-field-medium wpforms-field-required" name="name" required>
-                                </div>
-                                <div id="email-container" class="wpforms-field wpforms-field-email" data-field-id="1">
-                                    <label class="wpforms-field-label" for="email">Email <span class="wpforms-required-label">*</span></label>
-                                    <input type="email" id="email" class="wpforms-field-medium wpforms-field-required" name="email" required>
-                                </div>
-                                <div id="form-comment-container" class="wpforms-field wpforms-field-textarea" data-field-id="2">
-                                    <label class="wpforms-field-label" for="form-comment">Comment or Message <span class="wpforms-required-label">*</span></label>
-                                    <textarea id="form-comment" class="wpforms-field-medium wpforms-field-required" name="wpforms[fields][2]" required></textarea>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="well well-sm">
+                    <form class="form-horizontal" method="post" action="/home/feedback">
+                        <fieldset>
+                            <div class="form-group">
+                                <span class="col-md-1 col-md-offset-2 text-center">&nbsp;</span>
+                                <div class="col-md-8">
+                                    <input id="fname" name="fname" type="text" placeholder="First Name" class="form-control">
                                 </div>
                             </div>
-                            <div class="wpforms-submit-container" ><input type="hidden" name="wpforms[id]" value="110"><input type="hidden" name="wpforms[author]" value="1">
-                                <input type="hidden" name="wpforms[post_id]" value="1">
-                                <button type="submit" name="wpforms[submit]" class="wpforms-submit " id="wpforms-submit-110" value="wpforms-submit" aria-live="assertive" >Submit</button>
+                            <!--div class="form-group">
+                                <span class="col-md-1 col-md-offset-2 text-center">&nbsp;</span>
+                                <div class="col-md-8">
+                                    <input id="lname" name="name" type="text" placeholder="Last Name" class="form-control">
+                                </div>
+                            </div>-->
+
+                            <div class="form-group">
+                                <span class="col-md-1 col-md-offset-2 text-center">&nbsp;</span>
+                                <div class="col-md-8">
+                                    <input id="email" name="email" type="email" placeholder="Email Address" class="form-control">
+                                </div>
                             </div>
-                        </form>
-                    </div>  <!-- .wpforms-container -->                
+
+                            <div class="form-group">
+                                <span class="col-md-1 col-md-offset-2 text-center">&nbsp;</span>
+                                <div class="col-md-8">
+                                    <input id="phone" name="phone" type="text" placeholder="Phone" class="form-control">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <span class="col-md-1 col-md-offset-2 text-center">&nbsp;</span>
+                                <div class="col-md-8">
+                                    <textarea class="form-control" id="message" name="message" placeholder="Enter your massage for us here. We will get back to you within 2 business days." rows="7"></textarea>
+                                </div>
+                            </div>
+
+                            <div class="form-group"> 
+                                <span class="col-md-1 col-md-offset-2 text-center">&nbsp;</span>
+                                <div class="col-md-8 text-center">
+                                    <button type="submit" class="btn btn-primary btn-lg">Submit</button>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </form>
                 </div>
             </div>
         </div>
-    </section>
+                    
+        <div class="row">
+            <div class="form-group"> 
+                <span class="col-md-1 col-md-offset-2 text-center">&nbsp;</span>
+                <div class="col-md-8 text-center">
+                    <a href="" target="_blank">
+                        <h2 class="section-heading">
+                            <mark>Leave Data Management to Experts</mark>
+                        </h2>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<input type="hidden" id="testimonial_slidespeed" value="3000"/>  

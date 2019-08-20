@@ -1,0 +1,33 @@
+{{include file="header.html"}}
+        <main role="main" class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4">
+                <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pb-2 mb-3 border-bottom">
+                  <h1 class="h2">Biography</h1>
+                  <div class="btn-toolbar mb-2 mb-md-0">
+                    <div class="btn-group mr-2">
+                     
+                    </div>
+                   
+                  </div>
+                </div>
+                <div class="my-4">
+                    <h6 class="h6">Current image</h6> <br>
+                    <img src="{{$bio['url']}}" width="100" height="100">
+                  
+                </div>
+                <div class="my-4"  width="900" height="380">
+                    <form method="post" action="/admin/biography/save/">
+                        <div class="form-group">
+                          <label for="text">Image URL:</label>
+                          <input type="text" class="form-control" name="urlImg" value="{{$bio['url']}}">
+                        </div>
+                        <div class="form-group">
+                          <label for="pwd">Content:</label>
+                          <textarea class="form-control" name="biograpyContent">{{$bio['story']}}</textarea>
+                        </div>
+                        <button type="submit" class="btn btn-default">Submit</button>
+                    </form>
+                    <span>{{$ERROR}}</span>
+                </div>
+              </main>
+    {{include file="footer.html"}}
+  

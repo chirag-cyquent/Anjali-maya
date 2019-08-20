@@ -13,7 +13,7 @@ class Admin_reviews extends CI_Model {
                 }else{
                         $this->db->insert($this->table, $data);    
                        $iId = $this->db->insert_id();
-                        $this->db->update($this->table, ['hash_id'=>sha1($iId."_SALT")], array('id' => $iId));
+                        $this->db->update($this->table, ['hash_id'=>sha1($iId._SALT)], array('id' => $iId));
                    return ($iId > 0);
                 }
                 

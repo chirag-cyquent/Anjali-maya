@@ -5,13 +5,11 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
 		<title></title>
 		<style type="text/css">
-img.wp-smiley,
-img.emoji {
+img.wp-smiley, img.emoji {
 	display: inline !important;
 	border: none !important;
 	box-shadow: none !important;
-	height: 2px !important;
-	width: 2px !important;
+	
 	margin: 0 .07em !important;
 	vertical-align: -0.1em !important;
 	background: none !important;
@@ -152,10 +150,7 @@ footer{background:#20222b;}.navbar-default{background-color:#fff;}
 .navbar-default .navbar-toggle, 
 .navbar-default .navbar-toggle:focus{background:#fec503;border-color:#fec503;}.NovelLite_slider .container h1 a{color:#fff;}
 .NovelLite_slider .container p {color: #000;font-weight: 500;font-size: 28px;}.NovelLite_slider .slider_overlay{background-color:rgba(0, 0, 0, 0.1);}#section1 h2.section-heading{color:#333;}
-#section1 h3.section-subheading{color:#777;}
-#section1 h4.service-heading{color:#777;}
-#section1 p.text-muted{color:#777;}
-#section1{background:#fff;}
+
 .even .testimonial-inner .testimonial-header{color:#fff;}
 .bx-wrapper .bx-caption span{background:#fff; color:#000}
 .even{background-image:url({{$base_url}}/assets/images/Center-Page.jpeg);}
@@ -164,21 +159,27 @@ footer{background:#20222b;}.navbar-default{background-color:#fff;}
 .odd h2.section-heading{color:#333;}
 .odd h3.section-subheading{color:#777;}
 .odd {background:#fff;}
+.odd p.text-muted{color:#777;}
+.odd h4.service-heading{color:#777;}
 .odd .testimonial-inner .testimonial-header {color:#333333;}
 
 .review h2.section-heading{color:#333;}
 .review h3.section-subheading{color:#777;}
 .review{background-image: linear-gradient(rgb(241, 245, 247),rgb(226, 240, 245));} /*{background-image:url({{$base_url}}/assets/images/review-background.jpg);}*/
+.demo{background-image: linear-gradient(rgb(241, 245, 247),rgb(226, 240, 245));} /*{background-image:url({{$base_url}}/assets/images/review-background.jpg);}*/
+.bio{background-image: linear-gradient(rgb(226, 240, 245),rgb(241, 245, 247));} /*{background-image:url({{$base_url}}/assets/images/review-background.jpg);}*/
 
-#section4 h2.section-heading{color:#333;}
-#section4 h3.section-subheading{color:#777;}
-#section4 .team-member h4{color:#222;}
-#section4 .team-member p.text-muted{color:#777;}
-#section4 .team-member p{color:#333;}#section4{background:#f7f7f7;}
+.section4 h2.section-heading{color:#333;}
+.section4 h3.section-subheading{color:#777;}
+.section4 .team-member h4{color:#222;}
+.section4 .team-member p.text-muted{color:#777;}
+.section4 .team-member p{color:#333;}#section4{background:#f7f7f7;}
+
 .contactUs .section-heading{color:#fff;}
 .contactUs h3.section-subheading.contact{color:#fff;}
 .contactUs{background-image:url({{$base_url}}/assets/images/Contact-Us.jpeg);}
 .contactUs:before{background:rgba(0,0,0,0);}
+.contactUs label{color:#fff;}
 #section8 h2.section-heading{color:#333;}
 #section8 h3.section-subheading{color:#777;}
 #section8{background:#F7F7F7;}
@@ -207,6 +208,9 @@ mark{
     color:#222;
 }
 .bio-member a {color:#222;}
+legend {border:0;border-bottom:none;}
+.well{background-color: transparent;border: transparent;-webkit-box-shadow: none;}
+fieldset {background: transparent;}
 </style>
 <link rel="icon" href="{{$base_url}}/assets/images/cropped-arrows-box-business-533189-e1533635567575-1-32x32.jpg" sizes="32x32" />
 <link rel="icon" href="{{$base_url}}/assets/images/cropped-arrows-box-business-533189-e1533635567575-1-192x192.jpg" sizes="192x192" />
@@ -239,18 +243,22 @@ mark{
                 </button>
 				</div>
 				 <div class="col-lg-8 col-md-8 col-sm-7 col-xs-12">
-								<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-				    <ul class="sf-menu nav navbar-nav navbar-right">
-        <li><a href="http://www.anjali-maya.com/">Home</a></li><li class="page_item page-item-171 current_page_item"><a href="http://www.anjali-maya.com/">Home Page</a></li>
-    </ul>
-
+					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <ul class="sf-menu nav navbar-nav navbar-right">
+                            <li>
+                                <a href="http://www.anjali-maya.com/">Home</a>
+                            </li>
+                            <li class="page_item page-item-171 current_page_item">
+                                <a href="http://www.anjali-maya.com/">Home Page</a>
+                            </li>
+                        </ul>
     				</div>
-								</div>
+				</div>
             <!-- Collect the nav links, forms, and other content for toggling -->
 			</div>
         </div>
             <!-- /.navbar-collapse -->
         </div>
         <!-- /.container-fluid -->
-		</div>
+		
     </nav>

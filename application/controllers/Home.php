@@ -22,9 +22,36 @@ class Home extends CI_Controller {
 	{
 		$this->load->model('admin_pages');	
 		$this->load->model('admin_reviews');	
-		
+		$this->load->model('admin_demo');	
+		$this->load->model('admin_biography');	
+
 		$this->smarty->publish_to_tpl(["pages"=>	$this->admin_pages->get_page(false)]);
-		$this->smarty->publish_to_tpl(["reviews"=>	$this->admin_reviews->get_review(false)]);
+		$this->smarty->publish_to_tpl(["reviews"=>	array_chunk($this->admin_reviews->get_review(false),3)]);
+		$this->smarty->publish_to_tpl(["demo"=>	array_chunk($this->admin_demo->get_demo(false),3)]);
+		$this->smarty->publish_to_tpl(["bio"=>	$this->admin_biography->get_bio()]);
 		$this->smarty->view('home.html');
 	}
+
+	public function feedback(){
+		$this->load->library('email');
+
+		$this->email->initialize($GLOBALS['EmailConfig']);
+		$this->email->from('noreply@anjali-maya.com', 'www.anjali-maya.com');
+		$this->email->to('chirag.uber.banglore@gmail.com');
+		#$this->email->cc('another@another-example.com');
+		#$this->email->bcc('them@their-example.com');
+		$this->email->subject('Feedback');
+
+		$this->email->message('
+		Name: '.$this->input->post('fname').'<br>
+		Phone: '.$this->input->post('phone').'<br>
+		Email: '.$this->input->post('email').'<br>
+		Message: '.$this->input->post('message').'<br>
+		<br>
+		');
+		$this->email->send();
+
+		header('location: /');
+	}
+	
 }

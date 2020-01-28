@@ -3,10 +3,11 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="testimonial-inner animated bottom-to-top">
-                    <h1 class="testimonial-header wow fadeInUp" data-wow-duration="2s">{{$row['heading']}}</h1>
-                    <p style="margin-left: 22%" class="section-subheading text-muted" >
-                        {{$row['content']}} 
-                    </p>
+                    {{if $row['heading']|trim}} <h1 class="testimonial-header wow fadeInUp" data-wow-duration="2s">{{$row['heading']}}</h1>{{/if}}
+                     
+                    <div  class="section-subheading text-muted pageText" >
+                       {{$row['content']}} 
+                    </div>
                 </div>
             </div>
         </div>

@@ -116,13 +116,39 @@ class Admin extends CI_Controller {
 	}
 
 	public function biography($action = null){
+
 		$this->load->model('admin_biography');	
 		if($action == "save" )
 		{
 			$this->admin_biography->save_entry(["story"=>$this->input->post("biograpyContent"),
-			"url"=>$this->input->post("urlImg")], sha1("1"."_STALT"));
-			header('location: /admin/biograpy/');
+			"name"=>$this->input->post("name")], sha1("1"._SALT));
+			header('location: /admin/biography/');
 		}
+
+		if($action == "upload" )
+		{
+			$config['upload_path']          = __UPLOAD_PATH;
+			$config['allowed_types']        = 'gif|jpg|png';
+			$config['max_size']             = 100;
+			$config['max_width']            = 1024;
+			$config['max_height']           = 768;
+			
+			$this->load->library('upload', $config);
+
+			if ( ! $this->upload->do_upload('image_file'))
+			{
+				echo $this->upload->display_errors();
+				exit;
+			}
+			else
+			{
+					$data =  $this->upload->data();
+					$this->admin_biography->save_entry(["url"=>$data['file_name']], sha1("1"._SALT));
+					echo "Uploaded!";exit;
+			}
+			
+		}
+
 		$this->smarty->publish_to_tpl(array("bio"=>$this->admin_biography->get_bio()));
 		$this->smarty->view('bio.html');
 	}

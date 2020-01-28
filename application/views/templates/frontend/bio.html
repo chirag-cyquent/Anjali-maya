@@ -1,22 +1,24 @@
+
 <section id="section2" class="bio bg-light-gray " data-center="" data-top-bottom="">
 <div class="container">
 <div class="row">
     <div class="col-lg-12 text-center">
-            <h2 class="section-heading">About me</h2>
+            <h2 class="section-heading"></h2>
     </div>
 </div> 
 <div class="row wow fadeInRight" data-wow-duration="2s">
-    <div class="col-sm-9 th-1">
-    <div class="bio-member">
-    <a href="#"><h4>Chirag Kamat</h4></a>
-        <p class="text-muted">
-            {{$bio['story']}}
-        </p>
-    </div>
-    </div>
+  
     <div class="col-sm-3 th-1">
         <div class="bio-member">
-        <a href="#"><img src="{{$bio['url']}}" class="img-responsive img-circle" alt=""></a>
+        <a href="#"><img src="/uploads/{{$bio['url']}}" class="img-responsive img-circle" alt=""></a>
+        </div>
+    </div> 
+    <div class="col-sm-9 th-1">
+        <div class="bio-member">
+        <a href="#"><h4>{{$bio['name']}}</h4></a>
+            <p class="text-muted">
+                {{$bio['story']}}
+            </p>
         </div>
     </div>
 </div>

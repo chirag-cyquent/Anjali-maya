@@ -1,0 +1,58 @@
+<section id="section{{$index+1}}" class="{{if ($index+1)%2 ==0}}even{{else}}odd{{/if}} testimonial-wrapper  parallax-lite" data-center="background-position: 50% 0px"  data-top-bottom="background-position: 50% -100px;">
+    <div class="container" id="container_{{$row['id']}}">
+        
+        
+    </div>
+</section>
+<input type="hidden" id="testimonial_slidespeed" value="3000"/>   
+<div id="loadTable_{{$row['id']}}"style="display:none">{{$row['content']}}</div>
+
+<template class="rightTpl">
+    <div class="row">
+            <div class="col-md-5">
+            </div>
+            <div class="col-md-7" >
+                <div class="testimonial-inner animated bottom-to-top" style="margin-top: 13px;">
+                    <div   class="section-subheading text-muted pageText" >
+                   
+                    </div> 
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12" >&nbsp;
+            </div>
+        </div>
+</template>
+<template class="leftTpl">
+    <div class="row">
+        <div class="col-md-7" >
+            <div class="testimonial-inner animated bottom-to-top" style="margin-top: 13px;">
+                <div class="section-subheading text-muted pageText" >
+                   
+                </div> 
+            </div>
+        </div>
+        <div class="col-md-5">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12" >&nbsp;
+        </div>
+    </div>
+</template>
+<script>
+jQuery("#loadTable_{{$row['id']}}").find("table").each(function( index,value ) {
+var ltpl = jQuery(".leftTpl").html()
+var rtpl = jQuery(".rightTpl").html()
+    if(((index+1)%2)==0){
+        rtp = jQuery(rtpl);
+        rtp. find(".pageText").append(value )
+        jQuery("#container_{{$row['id']}}").append( rtp)
+    }else{
+        ltp = jQuery(ltpl);
+        ltp. find(".pageText").append(value )
+        jQuery("#container_{{$row['id']}}").append( ltp)
+    }
+});
+</script>

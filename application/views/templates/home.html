@@ -4,13 +4,18 @@
 	        
 <!-- *** Testimonial Slider Starts *** -->
 {{foreach $pages as $index => $row}}
-{{include file="frontend/pages.html"}}
+    {{if $row['template']}}  
+        {{$templateFile = $row['template']}} 
+        {{include file="frontend/$templateFile.html"}}
+    {{else}}
+        {{include file="frontend/pages.html"}}
+    {{/if}}
 {{/foreach}}
-              
+<!-- Demo Section -->
+{{include file="frontend/bio.html"}}       
 <!-- review Section -->
 {{include file="frontend/reviews.html"}}
-<!-- Demo Section -->
-{{include file="frontend/bio.html"}}
+
 
 {{include file="frontend/demo.html"}}
 

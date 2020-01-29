@@ -1,0 +1,16 @@
+<section id="section{{$index+1}}" class="{{if ($index+1)%2 ==0}}even{{else}}odd{{/if}} testimonial-wrapper  parallax-lite" data-center="background-position: 50% 0px"  data-top-bottom="background-position: 50% -100px;">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="testimonial-inner animated bottom-to-top">
+                    {{if $row['heading']|trim}} <h1 class="testimonial-header wow fadeInUp" data-wow-duration="2s">{{$row['heading']}}</h1>{{/if}}
+                     
+                    <div  class="section-subheading text-muted pageText" >
+                       {{$row['content']}} 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<input type="hidden" id="testimonial_slidespeed" value="3000"/>   

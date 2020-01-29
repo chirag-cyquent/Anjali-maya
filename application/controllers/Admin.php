@@ -97,6 +97,7 @@ class Admin extends CI_Controller {
 		{
 			$this->admin_demo->save_entry(["embeded"=>$this->input->post("embededContent"),
 			"order_no"=>$this->input->post("order_no"),
+			"title"=>$this->input->post("title"),
 			"hash_id"=>$this->input->post("embededID")],
 			$this->input->post("embededID") ?$this->input->post("embededID"):null);
 			header('location: /admin/demo/');

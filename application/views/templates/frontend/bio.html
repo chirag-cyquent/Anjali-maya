@@ -2,25 +2,25 @@
 <section id="section2" class="bio bg-light-gray " data-center="" data-top-bottom="">
 <div class="container">
 <div class="row">
-    <div class="col-lg-12 text-center">
-            <h2 class="section-heading"></h2>
+    <div class="col-lg-12 text-center biography">
+            <h2 class="section-heading">{{$bio['name']}}</h2>
     </div>
 </div> 
 <div class="row wow fadeInRight" data-wow-duration="2s">
-  
+    <div class="col-sm-1 th-1"> </div>
     <div class="col-sm-3 th-1">
         <div class="bio-member">
-        <a href="#"><img src="/uploads/{{$bio['url']}}" class="img-responsive" alt=""></a>
+       <img src="/uploads/{{$bio['url']}}" class="img-responsive" alt="">
         </div>
     </div> 
-    <div class="col-sm-9 th-1">
-        <div class="bio-member">
-        <a href="#"><h4>{{$bio['name']}}</h4></a>
-            <p class="text-muted">
-                {{$bio['story']}}
+    <div class="col-sm-7 th-1">
+        <div class="bio-member pageText">
+        
+            <p class="text-muted"><em>
+                {{$bio['story']}}</em>
             </p>
         </div>
-    </div>
+    </div><div class="col-sm-1 th-1"> </div>
 </div>
 </div>
 </section>

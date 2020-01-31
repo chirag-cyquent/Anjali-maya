@@ -36,12 +36,9 @@ class Home extends CI_Controller {
 		$this->load->library('email');
 
 		$this->email->initialize($GLOBALS['EmailConfig']);
-		$this->email->from('noreply@anjali-maya.com', 'www.anjali-maya.com');
-		$this->email->to('chirag.uber.banglore@gmail.com');
-		#$this->email->cc('another@another-example.com');
-		#$this->email->bcc('them@their-example.com');
-		$this->email->subject('Feedback');
-
+		$this->email->from('noreply@anjali-maya.com', 'thecrm.expert');
+		$this->email->to(_CONTACT_EMAIL);
+		$this->email->subject('thecrm.expert feedback');
 		$this->email->message('
 		Name: '.$this->input->post('fname').'<br>
 		Phone: '.$this->input->post('phone').'<br>

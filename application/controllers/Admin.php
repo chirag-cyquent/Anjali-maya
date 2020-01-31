@@ -72,6 +72,7 @@ class Admin extends CI_Controller {
 			"content"=>$this->input->post("content"),
 			"date"=>$this->input->post("date"),
 			"order_no"=>$this->input->post("order_no"),
+			"link"=>$this->input->post("link_text"),
 			"hash_id"=>$this->input->post("reviewID")],
 			$this->input->post("reviewID") ?$this->input->post("reviewID"):null);
 			header('location: /admin/reviews/');

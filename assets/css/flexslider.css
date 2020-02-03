@@ -125,7 +125,7 @@ html[xmlns] .flexslider .slides {
     transition: all 0.3s ease-in-out;
 }
 .flex-direction-nav .flex-prev {
-    background: url(../images/arrow_left.png) center no-repeat;
+   /* background: url(../images/arrow_left.png) center no-repeat;*/
     background-size: 40% 40%;
     height: 150px;
     width: 80px;
@@ -134,7 +134,7 @@ html[xmlns] .flexslider .slides {
     margin-left: -8px;
 }
 .flex-direction-nav .flex-next {
-    background: url(../images/arrow_right.png) center no-repeat;
+    /*background: url(../images/arrow_right.png) center no-repeat;*/
     background-size: 40% 40%;
     height: 150px;
     width: 80px;

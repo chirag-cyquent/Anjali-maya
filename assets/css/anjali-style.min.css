@@ -1,0 +1,240 @@
+.footer_bg, .woocommerce span.onsale, .woocommerce-page span.onsale, .woocommerce #content input.button, .woocommerce #respond input#submit, .woocommerce a.button, .woocommerce button.button, .woocommerce input.button, .woocommerce-page #content input.button, .woocommerce-page #respond input#submit, .woocommerce-page a.button, .woocommerce-page button.button, .woocommerce-page input.button, .woocommerce #content input.button.alt, .woocommerce #respond input#submit.alt, .woocommerce a.button.alt, .woocommerce button.button.alt, .woocommerce input.button.alt, .woocommerce-page #content input.button.alt, .woocommerce-page #respond input#submit.alt, .woocommerce-page a.button.alt, .woocommerce-page button.button.alt, .woocommerce-page input.button.alt, .woocommerce ul.products li.product a.button, .woocommerce.archive ul.products li.product a.button, .woocommerce-page.archive ul.products li.product a.button, .woocommerce #content input.button:hover, .woocommerce #respond input#submit:hover, .woocommerce a.button:hover, .woocommerce button.button:hover, .woocommerce input.button:hover, .woocommerce-page #content input.button:hover, .woocommerce-page #respond input#submit:hover, .woocommerce-page a.button:hover, .woocommerce-page button.button:hover, .woocommerce-page input.button:hover, .woocommerce #content input.button.alt:hover, .woocommerce #respond input#submit.alt:hover, .woocommerce a.button.alt:hover, .woocommerce button.button.alt:hover, .woocommerce input.button.alt:hover, .woocommerce-page #content input.button.alt:hover, .woocommerce-page #respond input#submit.alt:hover, .woocommerce-page a.button.alt:hover, .woocommerce-page button.button.alt:hover, .woocommerce-page input.button.alt:hover, .woocommerce ul.products li.product a.button:hover, .woocommerce.archive ul.products li.product a.button:hover, .woocommerce-page.archive ul.products li.product a.button:hover .woocommerce-page #respond input#submit, .woocommerce-product-search input[type='submit'], .ui-slider .ui-slider-range{
+    background:#fed136;
+} 
+.loader {
+ border-top: 2px solid #fed136;    
+}
+.text-primary {
+    color: #fed136;
+}
+a {
+    color: #fed136;
+}
+.btn-primary {
+    border-color: #fed136;
+    background-color:#fed136;
+}
+.btn-primary.disabled,
+.btn-primary[disabled],
+fieldset[disabled] .btn-primary,
+.btn-primary.disabled:hover,
+.btn-primary[disabled]:hover,
+fieldset[disabled] .btn-primary:hover,
+.btn-primary.disabled:focus,
+.btn-primary[disabled]:focus,
+fieldset[disabled] .btn-primary:focus,
+.btn-primary.disabled:active,
+.btn-primary[disabled]:active,
+fieldset[disabled] .btn-primary:active,
+.btn-primary.disabled.active,
+.btn-primary[disabled].active,
+fieldset[disabled] .btn-primary.active {
+    border-color:#fed136;
+    background-color:#fed136;
+}
+.btn-primary .badge {
+    color:#fed136;
+    background-color: #fff;
+}
+.btn-xl {
+    border-color: #fed136;
+    background-color: #fed136;
+}
+.navbar-default .navbar-brand, .bx-caption span p a {
+    color:#fed136;
+}
+
+.navbar-default .navbar-toggle:hover{
+ background-color:#fed136;
+ border-color:#fed136;
+}
+.navbar-default .navbar-nav>.active>a {
+    background-color:#fed136;
+}
+.timeline>li .timeline-image {
+    background-color:#fed136;
+}
+.contact_section .form-control:focus {
+    border-color:#fed136;
+}
+ul.social-buttons li a:hover,
+ul.social-buttons li a:focus,
+ul.social-buttons li a:active {
+    background-color:#fed136;
+}
+::-moz-selection {
+    background:#fed136;
+}
+
+::selection {
+    background:#fed136;
+}
+body {
+    -webkit-tap-highlight-color:#fed136;
+}
+ol.commentlist li.comment .comment-author .avatar {
+    border: 3px solid #fed136; 
+}
+ol.commentlist li.comment .reply a {
+    background: #fed136;
+}
+#commentform a {
+    color: #fed136;
+}
+.home_blog_content .post:hover .post_content_bottom{
+    background:#fed136;
+}
+#portfolio .portfolio-item .portfolio-link .portfolio-hover{
+    background:#fed136;
+}
+.navbar .sf-menu ul li {
+    background-color:#fed136;
+}
+.sf-menu ul ul li {
+    background-color:#fed136;
+}
+.navbar .sf-menu li:hover,
+.navbar .sf-menu li.sfHover,
+.navbar li.current_page_item {
+    background-color:#fed136;
+}
+.home .contact_section .leadform-show-form.leadform-lite input[type='submit']{
+  background: #fed136;
+  border: solid #fed136 1px;  
+}
+.home .contact_section .leadform-show-form.leadform-lite input:focus,
+.home .contact_section .leadform-show-form.leadform-lite textarea:focus{
+ border: solid #fed136 1px;    
+}
+#move-to-top{
+background: #fed136;  
+}
+a:hover, a:active, #section1 h4.service-heading:hover{color:#fed136;}.outer-footer{background:#eee;}
+footer{background:#20222b;}.navbar-default{background-color:#fff;}
+.navbar-default.navbar-shrink, .home .navbar-default.hdr-transparent.navbar-shrink{background-color:#fff;}
+.navbar-header h1 a,.navbar-header p, nav.split-menu .logo-cent h1 a, nav.split-menu .logo-cent p,nav.split-menu .logo-cent h1 a:hover{color:#fff;}
+.navbar-default .nav li a,.navbar .sf-menu li li a,.navbar-default .navbar-nav>.active>a{color:#fff;}
+.navbar-default .nav li a:hover, .navbar-default .nav li a:focus,.navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a:focus{color:#fff;}
+.navbar .sf-menu li:hover, .navbar .sf-menu li.sfHover, .navbar li.current_page_item,.navbar .sf-menu ul li,.navbar-default .navbar-nav>.active>a,.navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a:focus{background:#fec503}
+.navbar-default .navbar-toggle, 
+.navbar-default .navbar-toggle:focus{background:#fec503;border-color:#fec503;}.NovelLite_slider .container h1 a{color:#fff;}
+.NovelLite_slider .container p {color: #000;font-weight: 500;font-size: 28px;}.NovelLite_slider .slider_overlay{background-color:rgba(0, 0, 0, 0.1);}#section1 h2.section-heading{color:#333;}
+
+.even .testimonial-inner .testimonial-header{color:#fff;}
+.bx-wrapper .bx-caption span{background:#fff; color:#000}
+.even{background: url({{$base_url}}/assets/images/Page3.jpg);}
+.even:before{background:rgba(0, 0,0, 0);}
+
+.odd h2.section-heading{color:#333;}
+.odd h3.section-subheading{color:#777;}
+.odd {background:#fff;}
+.odd p.text-muted{color:#777;}
+.odd h4.service-heading{color:#777;}
+.odd .testimonial-inner .testimonial-header {color:#333333;}
+
+.review h2.section-heading{color:#333;}
+.review h3.section-subheading{color:#777;}
+.review{background:#fff;} /*{background-image:url({{$base_url}}/assets/images/review-background.jpg);}*/
+.demo{background: #f3f1f1;} /*{background-image:url({{$base_url}}/assets/images/review-background.jpg);}*/
+.bio{background-image: linear-gradient(rgb(226, 240, 245),rgb(241, 245, 247));} /*{background-image:url({{$base_url}}/assets/images/review-background.jpg);}*/
+
+.section4 h2.section-heading{color:#333;}
+.section4 h3.section-subheading{color:#777;}
+.section4 .team-member h4{color:#222;}
+.section4 .team-member p.text-muted{color:#777;}
+.section4 .team-member p{color:#333;}#section4{background:#f7f7f7;}
+
+.contactUs .section-heading{color:#fff;}
+.contactUs h3.section-subheading.contact{color:#fff;}
+.contactUs{background: url({{$base_url}}/assets/images/Page7.jpg);}
+.contactUs:before{background:rgba(0,0,0,0);}
+.contactUs label{color:#fff;}
+#section8 h2.section-heading{color:#333;}
+#section8 h3.section-subheading{color:#777;}
+#section8{background:#F7F7F7;}
+#price-package .post-title h1{color:#fff;}
+#price-package .post-title p{color:#fff;}#price-package{background-image:url({{$base_url}}/assets/images/pricing.jpg);}
+#price-package:before{background:rgba(0, 0,0, 0);}
+ h1.section1, .section1.a {
+    color:#5a5454 !important;
+}
+
+mark{
+    background-color: #fed136;
+    color:#5a5454 !important;
+}
+.section1 mark{ 
+    color:#5a5454 !important;
+    background-color: #fed136;
+}
+.home_blog_content .post .post_comment {
+    margin: 16px 0 16px 16px;
+    /*min-height: 135px;*/
+    text-align: justify;
+}
+.home_blog_content .post .post_meta {
+    list-style: none;
+    padding-left: 0px;
+    margin-bottom: 5%;
+}
+.bio-member {
+    margin-bottom: 50px;
+    text-align: left;
+    color:#222;
+}
+.bio-member a {color:#222;}
+legend {border:0;border-bottom:none;}
+.well{background-color: transparent;border: transparent;-webkit-box-shadow: none;}
+fieldset {background: transparent;}
+mark, .mark {
+    padding: 0;
+    background-color: #fed136;
+}
+h1, .h1, h2, .h2, h3, .h3 {
+    color:#222;
+    margin-top: -2px;
+    margin-bottom: 3px;
+}
+.pageText table{border: 0px !important;}
+
+.pageText h3{
+    margin-top: 4px;
+    font-size: 20px;
+    color:#000;
+    padding: 4px;
+}
+
+.pageText p{
+    font-size: 17px;
+    color:#5a5454 ;
+    margin: 5px 28px 2px;
+    line-height: 24px;
+}
+#section2 .pageText p{
+    font-size: 17px;
+    color:#fff ;
+    margin: 5px 28px 2px;
+    line-height: 24px;
+}
+#section2.bio .pageText p{
+    font-size: 17px;
+    ;color:#5a5454 ;
+    margin: 5px 28px 2px;
+    line-height: 24px;
+}
+.contact_section {
+    background-color: #222;
+    background: url({{$base_url}}/assets/images/Page7.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.biography h2{font-size: 36px !important;  margin-bottom: 41px !important;}
+.form-horizontal .form-group {
+    margin-right: 134px;
+    margin-left: -15px;
+}
+.demo_review h2 {
+    font-size: 42px !important;
+    margin-bottom: 41px !important;
+}

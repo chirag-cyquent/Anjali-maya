@@ -1,6 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
+
 class Home extends CI_Controller {
 
 	/**
@@ -33,9 +34,10 @@ class Home extends CI_Controller {
 	}
 
 	public function feedback(){
-		$this->load->library('phpmailer_lib');
-		global $EmailConfig;
-		$mail = $this->phpmailer_lib->load();
+		require APPPATH."third_party/PHPMailer/Exception.php";
+        require APPPATH."third_party/PHPMailer/PHPMailer.php";
+        require APPPATH."third_party/PHPMailer/SMTP.php";
+		$mail = new PHPMailer\PHPMailer\PHPMailer;
 	//	$mail->SMTPDebug = SMTP::DEBUG_SERVER;                      // Enable verbose debug output
 		$mail->isSMTP();                                            // Send using SMTP
 		$mail->Host       = __SMTP_HOST;                    // Set the SMTP server to send through

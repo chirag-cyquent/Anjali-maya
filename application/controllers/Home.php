@@ -33,21 +33,26 @@ class Home extends CI_Controller {
 	}
 
 	public function feedback(){
-		$this->load->library('email');
-
-		$this->email->initialize($GLOBALS['EmailConfig']);
-		$this->email->from(_CONTACT_EMAIL, 'thecrm.expert');
-		$this->email->to(_CONTACT_EMAIL);
-		$this->email->subject('thecrm.expert feedback');
-		$this->email->message('
-		Name: '.$this->input->post('fname').'<br>
-		Phone: '.$this->input->post('phone').'<br>
-		Email: '.$this->input->post('email').'<br>
-		Message: '.$this->input->post('message').'<br>
-		<br>
-		');
-		$this->email->send();
-
+		$this->load->library('phpmailer_lib');
+		global $EmailConfig;
+		$mail = $this->phpmailer_lib->load();
+	//	$mail->SMTPDebug = SMTP::DEBUG_SERVER;                      // Enable verbose debug output
+		$mail->isSMTP();                                            // Send using SMTP
+		$mail->Host       = __SMTP_HOST;                    // Set the SMTP server to send through
+		$mail->SMTPAuth   = true;                                   // Enable SMTP authentication
+		$mail->Username   = __SMTP_USER;                     // SMTP username
+		$mail->Password   = __SMTP_PASS;                               // SMTP password
+		$mail->SMTPSecure = "tls";         // Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` also accepted
+		$mail->Port       = __SMTP_PORT;                                    // TCP port to connect to
+		      
+		//Recipients
+		$mail->setFrom(__SMTP_USER, 'TheCRM.Expert');
+		$mail->addReplyTo($this->input->post('email'), $this->input->post('email'));
+		$mail->addAddress(_CONTACT_EMAIL, _CONTACT_EMAIL);
+		$mail->isHTML(true);                                  // Set email format to HTML
+		$mail->Subject = 'thecrm.expert feedback';
+		$mail->Body    ='Name: '.$this->input->post('fname').'<br>Phone: '.$this->input->post('phone').'<br>Email: '.$this->input->post('email').'<br>Message: '.$this->input->post('message').'<br><br>';
+		$mail->send();
 		header('location: /');
 	}
 	

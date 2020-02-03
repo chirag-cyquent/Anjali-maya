@@ -15,7 +15,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  */
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
-class phpmailer_lib{
+class Phpmailer_lib{
 
     function __construct()
     {

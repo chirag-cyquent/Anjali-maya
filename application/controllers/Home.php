@@ -37,8 +37,8 @@ class Home extends CI_Controller {
 		require APPPATH."third_party/PHPMailer/Exception.php";
         require APPPATH."third_party/PHPMailer/PHPMailer.php";
         require APPPATH."third_party/PHPMailer/SMTP.php";
-		$mail = new PHPMailer\PHPMailer\PHPMailer;
-	//	$mail->SMTPDebug = SMTP::DEBUG_SERVER;                      // Enable verbose debug output
+		$mail = new PHPMailer\PHPMailer\PHPMailer(true);
+		$mail->SMTPDebug = PHPMailer\PHPMailer\SMTP::DEBUG_SERVER;                      // Enable verbose debug output
 		$mail->isSMTP();                                            // Send using SMTP
 		$mail->Host       = __SMTP_HOST;                    // Set the SMTP server to send through
 		$mail->SMTPAuth   = true;                                   // Enable SMTP authentication
@@ -54,8 +54,15 @@ class Home extends CI_Controller {
 		$mail->isHTML(true);                                  // Set email format to HTML
 		$mail->Subject = 'thecrm.expert feedback';
 		$mail->Body    ='Name: '.$this->input->post('fname').'<br>Phone: '.$this->input->post('phone').'<br>Email: '.$this->input->post('email').'<br>Message: '.$this->input->post('message').'<br><br>';
-		$mail->send();
-		header('location: /');
+		$resp = $mail->send();
+
+		if($resp){
+			header('location: /');
+		}
+		else{
+
+			echo $mail->ErrorInfo; exit;
+		}
 	}
 	
 }

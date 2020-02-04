@@ -44,7 +44,7 @@ class Home extends CI_Controller {
 		$mail->SMTPAuth   = true;                                   // Enable SMTP authentication
 		$mail->Username   = __SMTP_USER;                     // SMTP username
 		$mail->Password   = __SMTP_PASS;                               // SMTP password
-		$mail->SMTPSecure = "tls";         // Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` also accepted
+		$mail->SMTPSecure = __SMTP_CRYPTO;         // Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` also accepted
 		$mail->Port       = __SMTP_PORT;                                    // TCP port to connect to
 		      
 		//Recipients

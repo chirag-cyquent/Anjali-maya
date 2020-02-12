@@ -37,7 +37,7 @@ class Home extends CI_Controller {
 		require APPPATH."third_party/PHPMailer/Exception.php";
         require APPPATH."third_party/PHPMailer/PHPMailer.php";
         require APPPATH."third_party/PHPMailer/SMTP.php";
-		$mail = new PHPMailer\PHPMailer\PHPMailer(true);
+		$mail = new PHPMailer\PHPMailer\PHPMailer();
 		$mail->SMTPDebug = PHPMailer\PHPMailer\SMTP::DEBUG_SERVER;                      // Enable verbose debug output
 		$mail->isSMTP();                                            // Send using SMTP
 		$mail->Host       = __SMTP_HOST;                    // Set the SMTP server to send through
@@ -61,8 +61,13 @@ class Home extends CI_Controller {
 		}
 		else{
 
-			echo $mail->ErrorInfo; exit;
+			$this-> log($mail->ErrorInfo, __FUNCTION__) ; 
+			header('location: /');
+		
 		}
+	}
+	private function log($error, $fucntion){
+		file_put_contents(APPPATH."logs/$fucntion-".date("d-M-Y")."-crmexpert.log",date("H:i:S -").json_encode($error)."\n",FILE_APPEND);
 	}
 	
 }
